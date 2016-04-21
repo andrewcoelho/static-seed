@@ -1,0 +1,28 @@
+// NOTE
+// html is set to 62.5% so that all the REM measurements
+// are based on 10px sizing. So basically 1.5rem = 15px :)
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6em;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: Helvetica, Helvetica Neue, sans-serif;
+  color: @font-color;
+  &.stop-scrolling { // Add this class to body to prevent scrolling with modals, etc.
+    position: fixed;
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+// Box-sizing reset for more intuitive layout
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}

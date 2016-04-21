@@ -1,0 +1,50 @@
+.btn,
+button {
+  display: inline-block;
+  position: relative;
+  padding: 0.625rem 1.875rem;
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  text-indent: 0.25em;
+  text-transform: uppercase;
+  vertical-align: top;
+  white-space: nowrap;
+  background: none;
+  border: 0;
+  overflow: hidden;
+  user-select: none;
+  transition: all 0.15s linear;
+  &.primary {
+    color: #fff;
+    background-color: @primary-color;
+    &:hover { background-color: darken(@primary-color, 15%); }
+    &.hollow {
+      color: @primary-color;
+      background: transparent;
+      border: 1px solid @primary-color;
+      &:hover {
+        color: darken(@primary-color, 15%);
+        border-color: darken(@primary-color, 15%);
+      }
+    }
+    &.round { border-radius: 20px; }
+  }
+  &.accent {
+    color: #fff;
+    background-color: @accent-color;
+    &:hover { background-color: darken(@accent-color, 5%); }
+    &.hollow {
+      color: @accent-color;
+      background: transparent;
+      border: 1px solid @accent-color;
+      &:hover {
+        color: darken(@accent-color, 5%);
+        border-color: darken(@accent-color, 5%);
+      }
+    }
+    &.round { border-radius: 20px; }
+  }
+}
